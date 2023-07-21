@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fancy Email Template</title>
+	<style>
+		/* Reset default styles */
+		body,
+		ul,
+		ol {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #333333;
+			background-color: #f1f1f1;
+		}
+
+		/* Main container */
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Header */
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #dddddd;
+		}
+
+		.header img {
+			max-height: 50px;
+		}
+
+		.header h1 {
+			font-size: 28px;
+			color: #0077cc;
+			margin: 0;
+		}
+
+		/* Body */
+		.body {
+			margin-bottom: 20px;
+		}
+
+		.body p {
+			margin-bottom: 10px;
+		}
+
+		/* Footer */
+		.footer {
+			text-align: center;
+			padding-top: 20px;
+			border-top: 1px solid #dddddd;
+		}
+
+		.footer p {
+			margin-bottom: 10px;
+		}
+
+		.footer a {
+			color: #0077cc;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 600px) {
+			.container {
+				max-width: 100%;
+				padding: 10px;
+			}
+
+			.header {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.header img {
+				margin-bottom: 10px;
+				max-width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<img src="https://example.com/logo.png" alt="Logo">
+			<h1>Newsletter</h1>
+		</div>
+		<div class="body">
+			<p>Dear John,</p>
+			<p>We are happy to announce that our new product is now available for purchase. This product is designed to make your life easier and more productive.</p>
+			<p>Click the button below to learn more:</p>
+			<p><a href="https://www.example.com/product-page" style="background-color: #0077cc; color: #ffffff; display: inline-block; font-size: 16px; padding: 10px 20px; text-align: center; text-decoration: none; transition: background-color 0.3s ease;">Learn More</a></p>
+		</div>
+		<div class="footer">
+			<p>&copy; 2023 Example Company. All rights reserved.</p>
+			<p><a href="https://www.example.com/privacy-policy">Privacy Policy</a> | <a href="https://www.example.com/terms-of-service">Terms of Service</a></p>
+		</div>
+	</div>
+</body>
+</html>
