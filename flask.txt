@@ -1,0 +1,90 @@
+I can try to help you write a flask app that can pick up parameters from upstream and then write in a json file then commit to GitHub. Here is an example of how I would do it:
+
+•  First, I would create a flask app that can accept parameters from a GET request and store them in a dictionary. For example, I would write something like this in Python:
+
+# Import Flask and request
+from flask import Flask, request
+
+# Create an app instance
+app = Flask(__name__)
+
+# Define a route for the app
+@app.route("/app")
+def app():
+# Create an empty dictionary
+data = {}
+# Loop through the request arguments
+for key, value in request.args.items():
+# Add the key-value pair to the dictionary
+data[key] = value
+# Return the dictionary as a string
+return str(data)
+
+•  Next, I would write the dictionary to a json file using the json module. For example, I would write something like this in Python:
+
+# Import Flask, request, and json
+from flask import Flask, request
+import json
+
+# Create an app instance
+app = Flask(__name__)
+
+# Define a route for the app
+@app.route("/app")
+def app():
+# Create an empty dictionary
+data = {}
+# Loop through the request arguments
+for key, value in request.args.items():
+# Add the key-value pair to the dictionary
+data[key] = value
+# Open a json file in write mode
+with open("data.json", "w") as f:
+# Write the dictionary to the json file
+json.dump(data, f)
+# Return the dictionary as a string
+return str(data)
+
+•  Finally, I would commit the json file to GitHub using the git module. For example, I would write something like this in Python:
+
+# Import Flask, request, json, and git
+from flask import Flask, request
+import json
+import git
+
+# Create an app instance
+app = Flask(__name__)
+
+# Define a route for the app
+@app.route("/app")
+def app():
+# Create an empty dictionary
+data = {}
+# Loop through the request arguments
+for key, value in request.args.items():
+# Add the key-value pair to the dictionary
+data[key] = value
+# Open a json file in write mode
+with open("data.json", "w") as f:
+# Write the dictionary to the json file
+json.dump(data, f)
+# Create a git repository object
+repo = git.Repo(".")
+# Add the json file to the staging area
+repo.git.add("data.json")
+# Commit the json file with a message
+repo.git.commit("-m", "Update data.json")
+# Push the commit to the remote repository
+repo.git.push()
+# Return the dictionary as a string
+return str(data)
+
+For more information on how to write a flask app that can pick up parameters from upstream and then write in a json file then commit to GitHub, you can refer to these web pages:
+
+•  GET Request Query Parameters with Flaskhttps://stackoverflow.com/questions/30779584/flask-restful-passing-parameters-to-get-request
+
+•  Working with JSON Data in Pythonhttps://www.geeksforgeeks.org/get-request-query-parameters-with-flask/
+
+•  GitPython Tutorialhttps://stackabuse.com/get-request-query-parameters-with-flask/
+
+I hope this helps you. blush
