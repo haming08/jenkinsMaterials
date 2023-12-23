@@ -1,0 +1,8 @@
+WITH latest_rows AS (
+  SELECT *, ROW_NUMBER() OVER (PARTITION BY environment ORDER BY timestamp DESC) AS row_num
+  FROM `your-project-id.your_dataset.your_table`
+  WHERE environment IN ('dev', 'NONE')
+)
+SELECT *
+FROM latest_rows
+WHERE row_num = 1
